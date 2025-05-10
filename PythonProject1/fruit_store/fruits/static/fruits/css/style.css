@@ -1,0 +1,55 @@
+/* Основные стили */
+body {
+    background-color: #f8fff0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.uk-card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.uk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+
+.price-tag {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+
+.uk-form-label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.uk-input, .uk-textarea {
+    border-radius: 6px !important;
+    border: 1px solid #ddd !important;
+}
+
+
+@media (max-width: 640px) {
+    .uk-container {
+        padding: 0 15px;
+    }
+
+    .uk-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+.uk-button-danger {
+    background-color: #e74c3c !important;
+}
+
+.uk-button-primary {
+    background-color: #27ae60 !important;
+}

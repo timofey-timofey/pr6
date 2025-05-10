@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить фрукт</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="{% static 'fruits/css/style.css' %}">
+</head>
+<body>
+<div class="uk-container uk-margin-top">
+    <h1 class="uk-heading-medium">➕ Добавить новый фрукт</h1>
+
+    <form class="uk-form-stacked" method="post">
+        {% csrf_token %}
+        <div class="uk-margin">
+            <label class="uk-form-label">Название:</label>
+            {{ form.name }}
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label">Описание:</label>
+            {{ form.description }}
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label">Цена за кг:</label>
+            {{ form.price }}
+        </div>
+
+        <div class="uk-margin">
+            <button type="submit" class="uk-button uk-button-primary">Сохранить</button>
+            <a href="{% url 'fruit_list' %}" class="uk-button uk-button-default">Отмена</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit.min.js"></script>
+</body>
+</html>
